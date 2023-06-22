@@ -2,7 +2,7 @@ import logging
 import boto3
 from botocorgit e.exceptions import ClientError
 import json
-AWS_REGION = 'us-west-2'
+AWS_REGION = 'eu-west-2'
 # logger config
 logger = logging.getLogger()
 logging.basicConfig(level=logging.INFO,
