@@ -2,4 +2,4 @@
 
 echo "Executing Pre-API Helpers"
 echo "Creation of VPC"
-python ./$CUSTOMIZATION/api_helpers/python/vpc.py
+python ./Prod/api_helpers/python/vpc.py
