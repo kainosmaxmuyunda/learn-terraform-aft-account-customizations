@@ -4,12 +4,14 @@ variable "name" {
   description = "Name of the VPC"
 }
 
-variable "project" { "landing zone"
+variable "project" {
+    default   = "Dev"
   type        = string
   description = "Name of project this VPC is meant to house"
 }
 
-variable "environment" { "DEV"
+variable "environment" {
+    default   = "Landing zone"
   type        = string
   description = "Name of environment this VPC is targeting"
 }
