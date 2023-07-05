@@ -141,26 +141,26 @@ resource "aws_route_table_association" "public" {
 #
 # NAT resources
 #
-resource "aws_eip" "nat" {
-  count = length(var.public_subnet_cidr_blocks)
+# resource "aws_eip" "nat" {
+#   count = length(var.public_subnet_cidr_blocks)
 
-  vpc = true
-}
+#   vpc = true
+# }
 
-resource "aws_nat_gateway" "default" {
-  depends_on = [aws_internet_gateway.default]
+# resource "aws_nat_gateway" "default" {
+#   depends_on = [aws_internet_gateway.default]
 
-  count = length(var.public_subnet_cidr_blocks)
+#   count = length(var.public_subnet_cidr_blocks)
 
-  allocation_id = aws_eip.nat[count.index].id
-  subnet_id     = aws_subnet.public[count.index].id
+#   allocation_id = aws_eip.nat[count.index].id
+#   subnet_id     = aws_subnet.public[count.index].id
 
-  tags = merge(
-    {
-      Name        = "gwNAT",
-      Project     = var.project,
-      Environment = var.environment
-    },
-    var.tags
-  )
-}
+#   tags = merge(
+#     {
+#       Name        = "gwNAT",
+#       Project     = var.project,
+#       Environment = var.environment
+#     },
+#     var.tags
+#   )
+# }
