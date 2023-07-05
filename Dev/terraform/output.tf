@@ -18,7 +18,7 @@ output "cidr_block" {
   description = "The CIDR block associated with the VPC"
 }
 
-output "nat_gateway_ips" {
-  value       = aws_eip.nat.*.public_ip
-  description = "List of Elastic IPs associated with NAT gateways"
-}
+# output "nat_gateway_ips" {
+#   value       = aws_eip.nat.*.public_ip
+#   description = "List of Elastic IPs associated with NAT gateways"
+# }
