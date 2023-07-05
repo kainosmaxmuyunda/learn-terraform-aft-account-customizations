@@ -17,7 +17,7 @@ variable "environment" {
 }
 
 variable "region" {
-  default     = "eu-west-1"
+  default     = "eu-west-2"
   type        = string
   description = "Region of the VPC"
 }
